@@ -268,7 +268,7 @@ function getMenuSelection(menuName,value){
 }
 let cellSelected;
 function getKeyedSelection(contentype,value){
-    let mySoundFx = new sound("/sound/STAPLER.WAV");
+    let mySoundFx = new sound("./sound/STAPLER.WAV");
     if(contentype == "band4" && numberOfBands == 3){contentype = "band3"; }
     if(contentype == "band_alt"){contentype = "band4"; }
     var band = document.getElementById(contentype);
