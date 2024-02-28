@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/javascript/mainscript.js" defer></script>
+    <link rel="stylesheet" href="/css/mainstyle.css" />
+    <link rel=" shortcut icon" type="image/png" href="/image/favicon-resistor.png" />
+    <title>Resistor Code</title>
+</head>
+<body onload="mkDisplay();">
+  <div id="MainContainer" class="main-container">
+            <nav id="MenuHeaderBar" class="menu-header-bar">
+            <div id="ResitorDisplaySelectionContainer" class="code-selection-container">
+                <div class="dd-band-num">
+                    <div class="dropdown">
+                        <button class="dropbtn">&#9776;</button>
+                        <div class="dropdown-content">
+                          <div onclick="getBandNumbers(3)"><img src="/image/tempsnip.png" width="50%" height="60%"><span class="dd-txt"> 3 Bands</span></div>
+                          <div onclick="getBandNumbers(4)"><img src="/image/tempsnip2.PNG" width="50%" height="60%"><span class="dd-txt"> 4 Bands</span></div>
+                          <div onclick="getBandNumbers(6)"><img src="/image/tempsnip3.PNG" width="50%" height="60%"><span class="dd-txt"> 6 Bands</span></div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+          </nav>
+        
+        <div id="r1_value" class="r1-value"></div>
+        <div id="r1" class="r-container ">
+          <div id="r1_center" class="r-common r-center">
+            <div class="l-pin"></div>
+            <div class="r-common r-left">
+                <div id="band1" class="bkground_brown band-1"></div>            
+            </div>        
+              <div id="band2" class="bkground_black band-2"></div>
+              <div id="band3" class="bkground_red band-3"></div>
+              <div id="band4"  style="display:block" class="bkground_green band-4"></div>
+              <div id="band5" class="bkground_gold band-5"></div>   
+              <div class="r-pin"></div>
+            <div class="r-common r-right">
+              <div id="band6" style="display:block" class="bkground_green band-6"></div>          
+            </div>     
+          </div> 
+        </div>
+      <div class="sheet-content-container">  
+        <div class="sheet-container">
+            <button type="button" class="collapsible">Resistor Code Sheet</button>
+            <div class="sheet-display-control">
+                <div id="CodeSheetContainer" class="sheet-content">
+                  <div class="cell-header">Color</div>
+                  <div class="cell-header">1st Band</div>
+                  <div class="cell-header">2nd Band</div>
+                  <div class="cell-header">3rd Band</div>
+                  <div id="forth-header" class="cell-header" style="display: none;">4th Band</div>
+                  <div class="cell-header">Multiplier</div>
+                  <div class="cell-header">Tolerance</div>
+                  <div class="cell-header">Temperature</div>
+                </div>
+              </div>
+          </div> 
+      </div>
+  </div>
+    
+
+   <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
+</body>
+</html>

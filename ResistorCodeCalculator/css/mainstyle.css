@@ -1,0 +1,407 @@
+:root{
+    font-family: 'Times New Roman', Times, serif;
+
+    /*page spaceing group*/
+    --mainContainer_Xpos: -10%;
+    --mainContainer_Ypos: 0%;
+    --header_menu_Ypos: 0%;
+    --header_menu_Xpos: 26%;
+    --resistorValue_Xpos: 35%;
+    --resistorValue_Ypos: 10%;
+    --resistorReducedValue_Xpos: 35%;
+    --resistorReducedValue_Ypos: 15%;
+    --resistor_Ypos: 18%;
+    --resistor_Xpos: 32%;
+    --control_Ypos: 22%;
+    --control_Xpos: 32%;
+    --sheet_Ypos: 35%;
+    --sheet_Xpos: 26%;
+
+    /* --END-- page spaceing group*/
+}
+
+body{
+    /* some CSS here */
+}
+/*
+@media only screen and (max-width: 300px) {
+    .sheet-container{
+        position: absolute;
+        top: var(--sheet_Ypos);
+        left: var(--sheet_Xpos);
+    }
+    .sheet-display-control{
+        display: block;
+    }
+    .sheet-content{
+        position: relative;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto
+    }
+    .sheet-content-alt{
+        position: relative;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto
+    }
+
+
+    .code-control-container{
+        position: absolute;
+        top:var(--control_Ypos);
+        left: var(--control_Xpos);
+    }
+
+}
+@media only screen and (min-width: 1200px) {*/
+.main-container{
+  /*  position: absolute;
+    top: var(--mainContainer_Xpos);
+    left: var(--mainContainer_Xpos);
+    width: 100%;
+    height: 100%;*/
+    margin: auto;
+}
+    .sheet-container{
+        position: absolute;
+        top: var(--sheet_Ypos);
+        left: var(--sheet_Xpos);
+        width: 50%;
+        height: 15%;
+    }
+    .sheet-display-control{
+        display: block;
+    }
+    .sheet-content{
+        position: relative;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto
+    }
+    .sheet-content-alt{
+        position: relative;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto
+    }
+
+
+    .code-control-container{
+        position: absolute;
+        top:var(--control_Ypos);
+        left: var(--control_Xpos);
+    }
+/*}*/
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: rgb(44, 40, 40);
+  }
+
+.cell-header{
+    font-weight: bolder;
+    border: solid black 1px;
+    width: auto;
+    height: 30px;
+    text-align: center;
+}
+.cell-content{
+    border: solid black 1px;
+    width: auto;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.cell-content:hover{
+    background-color: rgb(199, 189, 189);
+}
+.cell-content:active{
+    background-color: rgb(172, 152, 152);
+    border: inset rgb(199, 189, 189) 1px;
+    opacity: 5;
+}
+.bkground_black{background-color: black;color: white;}
+.bkground_brown{background-color: brown;color: white;}
+.bkground_red{background-color: red;color: white;}
+.bkground_orange{background-color: orange;color: white;}
+.bkground_yellow{background-color: yellow;color: black;}
+.bkground_green{background-color: green;color: white;}
+.bkground_blue{background-color: blue;color: white;}
+.bkground_violet{background-color: rgb(114, 7, 114);color: white;}
+.bkground_grey{background-color: grey;color: white;}
+.bkground_white{background-color: white;color: black;}
+.bkground_gold{background-color: rgb(255, 217, 0);color: black;}
+.bkground_silver{background-color: silver;color: white;}
+
+.r1-value{
+position: absolute;
+top: var(--resistorValue_Ypos);
+left: var(--resistorValue_Xpos);
+text-align: center;
+font-size: xx-large;
+font-weight: bold;
+}
+.r-container{
+  position: absolute;
+  top: var(--resistor_Ypos);
+  left: var(--resistor_Xpos);
+  width: 38%;
+  height: 15%;
+  /*border: solid #3e8e41 1px;*/
+}
+.r-common{
+  background-color: wheat;
+  border: solid black 0px;  
+}
+
+.r-center{
+   position: absolute; 
+   top: 10%;
+   left: 19%;   
+   width: 60%;
+   height: 80%;
+   
+}
+.r-left{
+    position: relative;
+    top: -30%;
+    left: -20%;    
+    width: 30%;
+    height: 120%;
+    border-radius: 60%;
+    /**/overflow: hidden;
+}
+.r-right{
+    position: relative;
+    top: -170%;
+    left: 93%;    
+    width: 30%;
+    height: 120%;
+    border-radius: 60%;
+    /**/overflow: hidden;
+}
+.l-pin{
+   position: relative; 
+   top: 43%;
+   left: -40%;
+   width: 45%;
+   height: 18%;
+   background-color: silver;
+   border: solid grey 1px;
+}
+.r-pin{
+    position: relative; 
+    top: -100%;
+    left: 98%;
+    width: 45%;
+    height: 18%;
+    background-color: silver;
+    border: solid grey 1px;
+}
+
+.band-1{
+    position: relative;
+    left: 50%;
+    top: 0px;
+    width: 15%;
+    height: 100%;
+    border: solid black 0px;
+}
+.band-2{
+    position: absolute;
+    left: 15%;
+    top: 0px;
+    width: 5%;
+    height: 100%;
+    border: solid black 0px;
+}
+.band-3{
+    position: absolute;
+    left: 30%;
+    top: 0px;
+    width: 5%;
+    height: 100%;
+    border: solid black 0px;
+}
+.band-4{
+    position: absolute;
+    display: block;
+    left: 45%;
+    top: 0px;
+    width: 5%;
+    height: 100%;
+    border: solid black 0px;
+}
+.band-5{
+    position: absolute;
+    left: 82%;
+    top: 0px;
+    width: 5%;
+    height: 100%;
+    border: solid black 0px;
+}
+.band-6{
+    position: relative;
+    display: block;
+    left: 40%;
+    top: 0px;
+    width: 15%;
+    height: 100%;
+    border: solid black 0px;
+}
+
+
+.code-display-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+.code-display-container > div{
+    margin: 5px; 
+}
+.code-selection-container{    
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    
+}
+.code-selection-container > div{
+    margin: 5px;
+}
+
+.display-band{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    font-size: 20px;
+    font-weight: bolder;     
+}
+.menu-header-bar{
+    position: relative;
+    background-color: #777;
+    left: var(--header_menu_Xpos);
+    top: var(--header_menu_Ypos);
+    width: 50%;
+    height: 3%;
+}
+
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*dropdown content----*/
+
+.dropbtn {
+    background-color: #777;
+    color: white;
+    padding: 0px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content div {   
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content div:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.display-band{
+
+}
+.dd-band-num{
+    
+}
+.dd-band-1{
+
+}
+.dd-band-2{
+
+}
+.dd-band-3{
+
+}
+.dd-band-4{
+
+}
+.dd-band-5{
+
+}
+.dd-band-6{
+
+}
+.dd-txt{
+    font-weight: bold;
+    text-align: right;
+}
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+/*--end-- dropdown content----*/
+
+@media only screen and (max-width: 600px) {
+    .r1-value{
+        position: absolute;
+        top: var(--resistorReducedValue_Ypos);
+        left: var(--resistorReducedValue_Xpos);
+        text-align: center;
+        font-size: large;
+        font-weight: bold;
+        }
+
+    .cell-header{
+        font-weight: bolder;
+        font-size: smaller;
+        border: solid black 1px;
+        width: auto;
+        height: 30px;
+        text-align: center;
+    }
+    .cell-content{
+        border: solid black 1px;
+        font-size: smaller;
+        width: auto;
+        height: 30px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        height: 10%;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 15px;
+        font-weight: bolder;
+      }
+}
